@@ -4,6 +4,9 @@ This project is a production-style Retrieval Augmented Generation (RAG) support 
 
 The system is designed to be reliable, cost-efficient, and scalable.
 
+**Live Demo:** https://clearpath-chatbot.onrender.com
+**Backend API:** https://clearpath-chatbot-backend.onrender.com
+
 ---
 
 ## Overview
@@ -231,17 +234,21 @@ Queries are classified as:
 
 This improves accuracy while reducing cost.
 
-### Planned Deployment (Vercel)
+### Live Deployment
+
+The project is deployed and publicly accessible.
 
 **Frontend**
 
-- Deploy React app on Vercel
+- React app deployed on **Vercel**
+- Live demo: [https://clearpath-chatbot.onrender.com](https://clearpath-chatbot.onrender.com)
 
 **Backend**
 
-- Deploy Express API as serverless functions
-- Store environment variables securely
-- Update frontend API base URL
+- Express API deployed on **Render**
+- Backend API: [https://clearpath-chatbot-backend.onrender.com](https://clearpath-chatbot-backend.onrender.com)
+- Environment variables (e.g. `GROQ_API_KEY`) configured securely on the host
+- Frontend uses `VITE_API_URL` to point to the deployed backend
 
 ---
 
