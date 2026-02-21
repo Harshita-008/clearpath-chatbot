@@ -1,0 +1,8 @@
+{"query":"How do I invite team members?","classification":"simple","model_used":"llama-3.1-8b-instant","latency_ms":386}
+{"query":"What roles can I assign?","classification":"simple","model_used":"llama-3.1-8b-instant","latency_ms":302}
+{"query":"Can I use Clearpath offline?","classification":"simple","model_used":"llama-3.1-8b-instant","latency_ms":258}
+{"query":"Is my data secure?","classification":"simple","model_used":"llama-3.1-8b-instant","latency_ms":439}
+{"query":"How do I export my data?","classification":"simple","model_used":"llama-3.1-8b-instant","latency_ms":301}
+{"query":"What does Clearpath cost?","classification":"simple","model_used":"llama-3.1-8b-instant","latency_ms":599}
+{"query":"Can I migrate from Jira?","classification":"complex","model_used":"llama-3.3-70b-versatile","latency_ms":503}
+{"query":"I cannot log in","classification":"simple","model_used":"llama-3.1-8b-instant","latency_ms":467}

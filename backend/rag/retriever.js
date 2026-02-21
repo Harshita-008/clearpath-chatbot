@@ -2,7 +2,7 @@ import fs from "fs";
 import cosineSimilarity from "./similarity.js";
 import getEmbedding from "./embedder.js";
 
-const data = JSON.parse(fs.readFileSync("./data/embeddings.json"));
+const data = JSON.parse(fs.readFileSync(new URL("../data/embeddings.json", import.meta.url)));
 
 async function retrieveRelevantChunks(query, topK = 5) {
   const queryEmbedding = await getEmbedding(query);

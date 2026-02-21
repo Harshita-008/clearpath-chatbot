@@ -1,6 +1,16 @@
-import axios from "axios";
+import dotenv from "dotenv";
+import path from "path";
+import { fileURLToPath } from "url";
+import axios from "axios"
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+// load backend/.env explicitly
+dotenv.config({ path: path.join(__dirname, "../.env") });
 
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
+
+console.log("Groq key loaded:", !!GROQ_API_KEY);
 
 async function streamGroqModel(model, prompt, onToken, retryCount = 0) {
   try {
