@@ -6,9 +6,7 @@ import ChatInput from './components/ChatInput'
 import WelcomeScreen from './components/WelcomeScreen'
 import MetadataPanel from './components/MetadataPanel'
 
-const isDev = import.meta.env.DEV
-const API_BASE = isDev ? '' : (import.meta.env.VITE_API_URL || 'http://localhost:5000')
-const API_PREFIX = isDev ? '/api' : ''
+const API_BASE = import.meta.env.VITE_API_URL;
 
 async function fetchWithRetry(url, retries = 2) {
   try {
@@ -50,7 +48,7 @@ function App() {
     setIsLoading(true)
 
     try {
-      const data = await fetchWithRetry(`${API_BASE}${API_PREFIX}/chat?q=${encodeURIComponent(text)}&session=demo`)
+      const data = await fetchWithRetry(`${API_BASE}/chat?q=${encodeURIComponent(text)}&session=demo`)
 
       const aiMessage = {
         id: Date.now() + 1,
