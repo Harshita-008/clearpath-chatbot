@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   {
     name: "Invite team members",
     query: "How do I invite team members?",

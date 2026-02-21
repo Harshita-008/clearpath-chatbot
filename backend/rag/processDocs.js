@@ -1,6 +1,6 @@
-const loadPDFs = require("../utils/pdfLoader");
-const chunkText = require("./chunker");
-const fs = require("fs");
+import loadPDFs from "../utils/pdfLoader.js";
+import chunkText from "./chunker.js";
+import fs from "fs";
 
 async function processDocs() {
   const docs = await loadPDFs();

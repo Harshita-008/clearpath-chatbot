@@ -44,4 +44,4 @@ function evaluateResponse(response, chunks) {
   };
 }
 
-module.exports = evaluateResponse;
+export default evaluateResponse;

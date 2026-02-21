@@ -1,4 +1,4 @@
-const axios = require("axios");
+import axios from "axios";
 
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
@@ -67,4 +67,4 @@ async function streamGroqModel(model, prompt, onToken, retryCount = 0) {
   }
 }
 
-module.exports = streamGroqModel;
+export default streamGroqModel;

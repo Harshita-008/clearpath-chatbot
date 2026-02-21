@@ -1,6 +1,6 @@
-const fs = require("fs");
-const cosineSimilarity = require("./similarity");
-const getEmbedding = require("./embedder");
+import fs from "fs";
+import cosineSimilarity from "./similarity.js";
+import getEmbedding from "./embedder.js";
 
 const data = JSON.parse(fs.readFileSync("./data/embeddings.json"));
 
@@ -18,4 +18,4 @@ async function retrieveRelevantChunks(query, topK = 5) {
   return scored.slice(0, topK);
 }
 
-module.exports = retrieveRelevantChunks;
+export default retrieveRelevantChunks;

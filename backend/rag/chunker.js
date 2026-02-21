@@ -10,4 +10,4 @@ function chunkText(text, size = 450, overlap = 80) {
   return chunks;
 }
 
-module.exports = chunkText;
+export default chunkText;

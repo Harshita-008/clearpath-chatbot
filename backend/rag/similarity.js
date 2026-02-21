@@ -12,4 +12,4 @@ function cosineSimilarity(a, b) {
   return dot / (Math.sqrt(normA) * Math.sqrt(normB));
 }
 
-module.exports = cosineSimilarity;
+export default cosineSimilarity;

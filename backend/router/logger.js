@@ -1,4 +1,4 @@
-const fs = require("fs");
+import fs from "fs";
 
 function logRouting(data) {
   fs.appendFileSync(
@@ -7,4 +7,4 @@ function logRouting(data) {
   );
 }
 
-module.exports = logRouting;
+export default logRouting;

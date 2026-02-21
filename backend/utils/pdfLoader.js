@@ -1,6 +1,10 @@
-const fs = require("fs");
-const path = require("path");
-const pdfjsLib = require("pdfjs-dist/legacy/build/pdf.js");
+import fs from "fs";
+import path from "path";
+import pdfjsLib from "pdfjs-dist/legacy/build/pdf.js";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 async function extractTextFromPDF(filePath) {
   const data = new Uint8Array(fs.readFileSync(filePath));
@@ -41,4 +45,4 @@ async function loadPDFs() {
   return documents;
 }
 
-module.exports = loadPDFs;
+export default loadPDFs;

@@ -1,11 +1,13 @@
-const express = require("express");
-const cors = require("cors");
-require("dotenv").config();
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
 
-const loadPDFs = require("./utils/pdfLoader");
-const retrieveRelevantChunks = require("./rag/retriever");
-const answerQuery = require("./rag/answerQuery");
-const { getHistory, addToHistory } = require("./memory/conversationMemory");
+import loadPDFs from "./utils/pdfLoader.js";
+import retrieveRelevantChunks from "./rag/retriever.js";
+import answerQuery from "./rag/answerQuery.js";
+import { getHistory, addToHistory } from "./memory/conversationMemory.js";
+
+dotenv.config();
 
 const app = express();
 

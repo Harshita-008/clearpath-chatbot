@@ -1,8 +1,8 @@
-const retrieveRelevantChunks = require("./retriever");
-const callGroqModel = require("../utils/groqClient");
-const { classifyQuery, chooseModel } = require("../router/router");
-const evaluateResponse = require("../evaluator/evaluator");
-const logRouting = require("../router/logger");
+import retrieveRelevantChunks from "./retriever.js";
+import callGroqModel from "../utils/groqClient.js";
+import { classifyQuery, chooseModel } from "../router/router.js";
+import evaluateResponse from "../evaluator/evaluator.js";
+import logRouting from "../router/logger.js";
 
 async function answerQuery(query, history = []) {
   let classification = classifyQuery(query);
@@ -219,4 +219,4 @@ Answer:
   };
 }
 
-module.exports = answerQuery;
+export default answerQuery;

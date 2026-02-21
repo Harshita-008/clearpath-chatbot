@@ -26,4 +26,4 @@ function clearHistory(sessionId) {
   memoryStore[sessionId] = [];
 }
 
-module.exports = { getHistory, addToHistory, clearHistory };
+export { getHistory, addToHistory, clearHistory };

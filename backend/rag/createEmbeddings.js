@@ -1,5 +1,5 @@
-const fs = require("fs");
-const getEmbedding = require("./embedder");
+import fs from "fs";
+import getEmbedding from "./embedder.js";
 
 async function run() {
   const chunks = JSON.parse(fs.readFileSync("./data/chunks.json"));

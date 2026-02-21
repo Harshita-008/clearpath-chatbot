@@ -53,4 +53,4 @@ function chooseModel(classification) {
     : "llama-3.1-8b-instant";
 }
 
-module.exports = { classifyQuery, chooseModel };
+export { classifyQuery, chooseModel };

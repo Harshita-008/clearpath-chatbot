@@ -1,6 +1,8 @@
-require("dotenv").config();
-const answerQuery = require("../rag/answerQuery");
-const testCases = require("./testCases");
+import dotenv from "dotenv";
+import answerQuery from "../rag/answerQuery.js";
+import testCases from "./testCases.js";
+
+dotenv.config();
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -37,7 +39,6 @@ function sleep(ms) {
       console.log();
     }
 
-    // avoid rate limit
     await new Promise(res => setTimeout(res, 1500));
   }
 
