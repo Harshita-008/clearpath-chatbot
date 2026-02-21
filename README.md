@@ -5,6 +5,7 @@ This project is a production-style Retrieval Augmented Generation (RAG) support 
 The system is designed to be reliable, cost-efficient, and scalable.
 
 **Live Demo:** https://clearpath-chatbot.onrender.com
+
 **Backend API:** https://clearpath-chatbot-backend.onrender.com
 
 ---
