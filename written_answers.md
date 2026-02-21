@@ -108,3 +108,54 @@ Implement a **tiered fallback response strategy**:
 3. Provide clear escalation steps (support contact, logs to collect).  
 
 This would maintain factual integrity while improving real-world usefulness.
+
+---
+
+## AI Usage
+
+I used an AI assistant (ChatGPT) during development as a debugging partner and technical reference, similar to using documentation or StackOverflow. It helped clarify architecture decisions, debug errors, and improve reliability. All implementation decisions, testing, and final validation were completed manually.
+
+Below are the exact prompts used.
+
+### Architecture & Setup
+> Help me design a RAG-based support chatbot using Node.js and documentation PDFs.  
+> Explain a scalable folder structure for retrieval, routing, evaluation, and memory.
+
+### Retrieval & Search
+> How do I chunk documents and generate embeddings for semantic search?  
+> Why might cosine similarity retrieval return irrelevant chunks?
+
+### Routing Logic
+> How can I classify queries as simple vs complex without using an LLM?  
+> What keywords indicate conceptual vs FAQ-style questions?
+
+### Conversation Memory
+> How can I maintain conversation history while minimizing token usage?  
+> What is a simple way to store short-term chat memory in Node.js?
+
+### Prompt & Hallucination Control
+> Help me write a prompt that forces answers to use only provided context.  
+> How can I return a fallback message when the answer is not in context?
+
+### Evaluation Harness
+> How do I build an evaluation harness with pass/fail test cases?  
+> What queries detect hallucinations or unsupported features?
+
+### Debugging & Reliability
+> Why am I getting Groq rate limit errors and how should I retry safely?  
+> How do I fix undefined errors in my evaluation script?
+
+### Deployment & Production Issues
+> Why does Vercel show “require is not defined in ES module scope”?  
+> How do I deploy an Express backend using Vercel serverless functions?  
+> Why am I getting 404 errors after deployment?
+
+### Documentation & Submission
+> Help me write a clear README and strong written answers for evaluation.
+
+### Responsible Use
+- Used for debugging and technical clarification  
+- Used to understand design tradeoffs and best practices  
+- Final architecture, evaluation logic, and safeguards were implemented and tested independently  
+
+AI assistance accelerated development, but system behavior, reliability decisions, and testing reflect my own implementation work.
