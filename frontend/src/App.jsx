@@ -6,7 +6,7 @@ import ChatInput from './components/ChatInput'
 import WelcomeScreen from './components/WelcomeScreen'
 import MetadataPanel from './components/MetadataPanel'
 
-const API_BASE = import.meta.env.VITE_API_URL;
+const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 async function fetchWithRetry(url, retries = 2) {
   try {
